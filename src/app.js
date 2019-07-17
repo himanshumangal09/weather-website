@@ -56,12 +56,11 @@ geocode(req.query.address,(error, {latitude,longitude,location}={})=> {
      }
      if(error) {
          return res.send({
-             error:'error'})
+             error:'location can not be find'})
      }
   forecast(latitude,longitude, (error, foredata) => {
      if(error) {
-         return res.send({
-             error:'error'})
+         return res.send({error})
      }    
      res.send({
          location,
