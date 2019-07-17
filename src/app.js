@@ -5,6 +5,7 @@ const forecast=require('./utils/forecast')
 const hbs=require('hbs')
 //express is a function!!
 const app=express()
+const port = process.env.PORT || 3000
       
 //define path for express config
 const pathdir=path.join(__dirname,'../public')
@@ -96,6 +97,6 @@ app.get('*',(req,res)=>{
         name:'himanshu'
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('started succes')
 })
